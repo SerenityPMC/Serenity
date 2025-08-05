@@ -1,31 +1,43 @@
 
 /* MEGAMENU STYLE
 =================================*/
+/* MEGAMENU STYLE
+=================================*/
 nav.main-menu .mega-menu-item.megamenu-fw {
     position: static;
 }
-nav.main-menu .megamenu-fw .mega-submenu, nav.main-menu .megamenu-content {
-    margin: 0px auto;
-    width: calc(100% - 47.5%);
+
+nav.main-menu .megamenu-fw .mega-submenu,
+nav.main-menu .megamenu-content {
+    margin: 0 auto;
+    /* Simplified to full width with max-width for responsiveness */
+    width: 100%;
+    max-width: 1200px; /* Prevents menu from becoming too wide on large screens */
+    box-sizing: border-box;
 }
-nav.main-menu .megamenu-fw .mega-submenu .row{
+
+nav.main-menu .megamenu-fw .mega-submenu .row {
     margin: 0;
 }
+
 nav.main-menu .megamenu-content {
-    width: 100%;
+    width: 100%; /* Ensure full width for consistency */
 }
-nav.main-menu .megamenu-content_pages .title{
+
+nav.main-menu .megamenu-content_pages .title,
+nav.main-menu .megamenu-content-portfolio .title {
     margin-bottom: 0;
     display: block;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 40px;
-    padding: 11px 25px 0px 0;
+    font-size: 1.25rem; /* Use rem for scalable font size */
+    line-height: 2rem;
+    padding: 0.75rem 1.5rem 0 0;
     text-transform: capitalize;
     font-family: var(--base-headingfont);
     color: var(--base-dark);
 }
-nav.main-menu ul.menu > li:after{
+
+nav.main-menu ul.menu > li:after {
     width: 6px;
     height: 6px;
     left: 5px;
@@ -36,132 +48,92 @@ nav.main-menu ul.menu > li:after{
     border-radius: 50%;
     opacity: 1;
     position: absolute;
-    -webkit-transition: .3s;
-    -moz-transition: .3s;
-    -ms-transition: .3s;
-    -o-transition: .3s;
     transition: .3s;
     content: "";
 }
-  
+
 nav.main-menu ul.mega-submenu.megamenu-content li ul.menu-col {
-    padding: 0 10px 13px;
+    padding: 0 0.625rem 0.8125rem; /* 10px 13px */
 }
+
 nav.main-menu ul.menu li ul.mega-submenu li ul.menu-col li {
-    padding: 5px 20px;
+    padding: 0.3125rem 1.25rem; /* 5px 20px */
 }
-nav.main-menu ul.mega-submenu.megamenu-content li ul.menu-col {
-    padding: 0 25px 13px;
-}
+
 nav.main-menu .mega-menu-item.megamenu-fw .mega-submenu {
     left: 0;
     right: 0;
 }
-nav.main-menu .megamenu-content_pages {
-    width: calc(100% - 15%) !important;
-    margin: 0 auto !important;
-}
+
+nav.main-menu .megamenu-content_pages,
 nav.main-menu .megamenu-content-portfolio {
-    width: calc(100% - 32%) !important;
+    width: 100% !important; /* Override specific percentage widths */
     margin: 0 auto !important;
+    max-width: 1200px; /* Consistent max-width */
 }
-.prt-header-style-02 nav.main-menu .megamenu-fw .mega-submenu, nav.main-menu .megamenu-content,
-.prt-header-style-03 nav.main-menu .megamenu-fw .mega-submenu, nav.main-menu .megamenu-content {
-    margin: 0px auto;
-    width: 740px;
+
+nav.main-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
-.prt-header-style-02 nav.main-menu .megamenu-content_pages ,
-.prt-header-style-03 nav.main-menu .megamenu-content_pages {
-    width: calc(100% - 33.7%) !important;
-    margin: 0 auto !important;
-}
-.prt-header-style-02 nav.main-menu .megamenu-content-portfolio ,
-.prt-header-style-03 nav.main-menu .megamenu-content-portfolio {
-    width: 885px !important;
-    margin: 0 auto !important;
-}
-nav.main-menu ul { 
-  padding: 0px; 
-  margin: 0px; 
-  list-style: none;
-}
+
 nav.main-menu ul li {
     position: relative;
 }
-nav.main-menu{
+
+nav.main-menu {
     margin-bottom: 0;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -o-border-radius: 0px;
-    border-radius: 0px;
+    border-radius: 0;
     border: none;
     z-index: 2;
 }
-nav.main-menu .megamenu-content-portfolio .title {
-    margin-bottom: 0;
-    display: block;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 32px;
-    padding: 20px 25px 10px 0;
-    text-transform: capitalize;
-    font-family: var(--base-headingfont);
-    color: var(--base-dark);
-}
-nav.main-menu ul.menu li.active ul.mega-submenu li ul.menu-col li.active a {
-    color: var(--base-skin);
-}
-nav.main-menu li ul.mega-submenu {
+
+nav.main-menu ul.menu li ul.mega-submenu {
     text-align: left;
     position: absolute;
     visibility: hidden;
-    display: block;
     opacity: 0;
-    width: 250px;
+    width: 100%; /* Full width for submenu */
+    max-width: 250px; /* Default max-width for smaller submenus */
     line-height: 14px;
     margin: 0;
     list-style: none;
-    left: 0px;
+    left: 0;
     padding: 0;
     background-color: #24272a;
-    background-clip: padding-box;
-    z-index: 99;
+    box-shadow: 0 3px 25px 0 rgb(43 52 59 / 10%);
     transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    -webkit-box-shadow: 0px 4px 4px 1px rgb(0 0 0 / 20%);
-    box-shadow: 0px 4px 4px 1px rgb(0 0 0 / 20%);
-    -webkit-transform: rotateX(-90deg);
     transform: rotateX(-90deg);
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;    
-    -webkit-box-shadow: 0 3px 25px 0px rgb(43 52 59 / 10%), 0 0 0 rgb(43 52 59 / 10%) inset;
-    box-shadow: 0 3px 25px 0px rgb(43 52 59 / 10%), 0 0 0 rgb(43 52 59 / 10%) inset;
-    background-clip: padding-box;
+    transform-origin: 0 0;
 }
-nav.main-menu ul.menu > li{
+
+nav.main-menu ul.menu > li {
     position: relative;
     display: inline-block;
 }
+
 nav.main-menu ul.menu li ul.mega-submenu li a {
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 1rem;
+    line-height: 1.625rem;
     font-weight: 400;
     display: block;
-    padding: 16px 15px 16px 15px;
+    padding: 1rem 0.9375rem;
     text-align: left;
     border-radius: 0;
-    -webkit-transition: all .3s linear;
     transition: all .3s linear;
 }
+
 nav.main-menu ul.menu li ul.mega-submenu > li:last-child > a {
     border-bottom: 0;
 }
-ul.menu-col li a{
+
+ul.menu-col li a {
     color: #fff;
 }
+
 ul.menu-col li a:hover,
-ul.menu-col li a:focus{
+ul.menu-col li a:focus {
     text-decoration: none;
 }
 
@@ -672,26 +644,158 @@ ul.menu-col li a:focus{
     .prt-header-style-03 nav.main-menu { border: none; }
 }
 
-@media (min-width: 768px) {
-    nav.main-menu {
-        margin-right: 150px
+/* Tablet-specific styles (768px–1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    nav.main-menu .megamenu-fw .mega-submenu,
+    nav.main-menu .megamenu-content,
+    nav.main-menu .megamenu-content_pages,
+    nav.main-menu .megamenu-content-portfolio {
+        width: 100% !important; /* Full width for tablets */
+        max-width: 95%; /* Slightly less than full width for padding */
+        margin: 0 auto;
+        padding: 0.5rem;
     }
-    
-.grid-item img {
-  height: 192px;
-  width: 100%;
+
+    nav.main-menu .megamenu-content_pages .title,
+    nav.main-menu .megamenu-content-portfolio .title {
+        font-size: 1.125rem; /* Slightly smaller for tablets */
+        padding: 0.5rem 1rem 0 0;
+    }
+
+    nav.main-menu ul.mega-submenu.megamenu-content li ul.menu-col {
+        padding: 0 0.5rem 0.75rem;
+    }
+
+    nav.main-menu ul.menu li ul.mega-submenu li ul.menu-col li {
+        padding: 0.25rem 0.75rem;
+    }
+
+    nav.main-menu ul.mega-submenu.megamenu-content li ul.menu-col-img img {
+        max-height: 200px; /* Smaller images for tablets */
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .grid-item img {
+        height: auto; /* Proportional scaling */
+        max-height: 150px; /* Adjusted for tablets */
+        width: 100%;
+    }
+
+    .y-2.grid-item img {
+        max-height: 300px; /* Adjusted for tablets */
+        width: 100%;
+    }
+
+    nav.main-menu {
+        margin-right: 0; /* Remove large margin for tablets */
+    }
+}
+/* Mobile-specific styles (max-width: 767px) */
+@media (max-width: 767px) {
+    nav.main-menu {
+        position: fixed; /* Use fixed to prevent scrolling issues */
+        padding: 0.625rem;
+        right: 0;
+        top: 60px; /* Adjusted for smaller headers */
+        width: 100%; /* Full width for mobile */
+        max-width: 320px; /* Slightly smaller than 350px for phones */
+        background-color: #000;
+        box-shadow: 3px 3px 15px rgb(0 0 0 / 12%);
+        transform: translateX(100%);
+        transition: all 0.5s ease;
+    }
+
+    nav.main-menu.show {
+        transform: translateX(0);
+    }
+
+    nav.main-menu ul.menu,
+    nav.main-menu ul.menu > li {
+        display: block;
+    }
+
+    nav.main-menu ul.menu > li > a {
+        font-size: 1rem;
+        padding: 0.75rem;
+        line-height: 1.5rem;
+        border-top: none;
+    }
+
+    nav.main-menu ul.menu li ul.mega-submenu {
+        width: 100%;
+        max-width: none; /* Remove max-width for mobile */
+        background-color: transparent;
+        box-shadow: none;
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+        padding: 0;
+    }
+
+    nav.main-menu ul.mega-submenu.megamenu-content li ul.menu-col {
+        padding: 0 0.75rem 0.75rem;
+    }
+
+    nav.main-menu .megamenu-content_pages .title,
+    nav.main-menu .megamenu-content-portfolio .title {
+        font-size: 1rem;
+        padding: 0.5rem 0.75rem 0;
+    }
+
+    nav.main-menu ul.mega-submenu.megamenu-content li ul.menu-col-img img {
+        max-height: 150px; /* Smaller for mobile */
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .grid-item img {
+        height: auto;
+        max-height: 120px; /* Adjusted for mobile */
+        width: 100%;
+    }
+
+    .y-2.grid-item img {
+        max-height: 250px; /* Adjusted for mobile */
+        width: 100%;
+    }
+
+    .menubar {
+        position: absolute;
+        right: 0.9375rem;
+        top: 0;
+        bottom: 0;
+        z-index: 9;
+        cursor: pointer;
+    }
+
+    .menubar-box {
+        width: 1.875rem;
+        height: 1.5rem;
+    }
 }
 
-.y-2.grid-item img {
-  height: 400px;
-  width: 100%;
-}
+/* Large screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+    nav.main-menu .megamenu-fw .mega-submenu,
+    nav.main-menu .megamenu-content {
+        max-width: 1200px; /* Consistent max-width */
+    }
 
-.grid-item {
-  margin-bottom: 16px;
-    float: left;
-}
+    nav.main-menu ul.menu > li > a {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.9375rem;
+        line-height: 0.9375rem;
+    }
 
-.row.grid {
-    display: block;
+    nav.main-menu ul.mega-submenu.megamenu-content_pages li ul.menu-col-img img,
+    nav.main-menu ul.mega-submenu.megamenu-content li ul.menu-col-img img {
+        height: 290px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0 15px 15px 0;
+    }
 }
