@@ -1856,6 +1856,17 @@ nav.main-menu ul.menu > li.mega-menu-item:hover > a {
     color: var(--base-skin);
 }
 
+.megamenu-content-services {
+    min-width: 200px;
+    width: auto;
+}
+
+.megamenu-content-services .menu-col li a {
+    white-space: nowrap;
+    padding: 8px 15px;
+    display: block;
+}
+
 
 /*Revolution banner*/
 
